@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Your Salary</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Report Your Salary</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="report.html">Report Salary</a></li>
+                <li><a href="browse.html">Browse Salaries</a></li>
+                <li><a href="estimate.html">Salary Estimation</a></li>
+                <li><a href="community.html">Community Posts</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form id="salaryForm">
+            <label for="companyName">Company Name:</label>
+            <input type="text" id="companyName" name="companyName" required><br><br>
+
+            <label for="jobTitle">Job Title:</label>
+            <input type="text" id="jobTitle" name="jobTitle" required><br><br>
+
+            <label for="experience">Years of Experience:</label>
+            <input type="number" id="experience" name="experience" min="0" required><br><br>
+
+            <label for="education">Education Level:</label>
+            <select id="education" name="education" required>
+                <option value="">Select education level</option>
+                <option value="high_school">High School</option>
+                <option value="bachelor">Bachelor's Degree</option>
+                <option value="master">Master's Degree</option>
+                <option value="phd">PhD</option>
+            </select><br><br>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required><br><br>
+
+            <label for="jobCategory">Job Category:</label>
+            <select id="jobCategory" name="jobCategory" required>
+                <option value="">Select a category</option>
+                <option value="technology">Technology</option>
+                <option value="healthcare">Healthcare</option>
+                <option value="finance">Finance</option>
+                <option value="education">Education</option>
+                <option value="manufacturing">Manufacturing</option>
+                <option value="retail">Retail</option>
+            </select><br><br>
+
+            <label for="salary">Salary ($):</label>
+            <input type="number" id="salary" name="salary" required><br><br>
+
+            <button type="submit">Submit Salary</button>
+        </form>
+    </main>
+
+    <script>
+        document.getElementById('salaryForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+            
+            // Display success message
+            alert('Salary submitted successfully!');
+
+            // Redirect to home page after 1 second
+            setTimeout(function() {
+                window.location.href = 'index.html';
+            }, 1000); // 1000 milliseconds = 1 second
+        });
+    </script>
+</body>
+</html>

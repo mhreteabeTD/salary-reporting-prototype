@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Salaries</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Browse Salaries</h1>
+        <nav>
+            <ul>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="report.html">Report Salary</a></li>
+                    <li><a href="browse.html">Browse Salaries</a></li>
+                    <li><a href="estimate.html">Salary Estimation</a></li>
+                    <li><a href="community.html">Community Posts</a></li>
+                </ul>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="filters">
+            <label for="filterCompany">Filter by Company:</label>
+            <input type="text" id="filterCompany" oninput="filterSalaries()">
+
+            <label for="filterCategory">Filter by Job Category:</label>
+            <select id="filterCategory" onchange="filterSalaries()">
+                <option value="">All Categories</option>
+                <option value="technology">Technology</option>
+                <option value="healthcare">Healthcare</option>
+                <option value="finance">Finance</option>
+                <option value="education">Education</option>
+                <option value="manufacturing">Manufacturing</option>
+                <option value="retail">Retail</option>
+            </select>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Job Title</th>
+                    <th>Company</th>
+                    <th>Median Salary</th>
+                </tr>
+            </thead>
+            <tbody id="salaryList">
+            </tbody>
+        </table>
+    </main>
+    <script src="browse.js"></script>
+</body>
+</html>
